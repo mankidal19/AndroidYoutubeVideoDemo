@@ -11,7 +11,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class PlayYoutubeActivity extends YouTubeBaseActivity {
 
-    public static final String YT_API_KEY = "ENTER_YOUR_KEY_HERE";
+    public static final String YT_API_KEY = "AIzaSyBUyBmflqggfb33TO6eumtH7m3_XCoCbmY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class PlayYoutubeActivity extends YouTubeBaseActivity {
                                                         YouTubePlayer youTubePlayer, boolean b) {
 
                         // do any work here to cue video, play video, etc.
-                        youTubePlayer.cueVideo("5xVh-7ywKpE");
+                        youTubePlayer.cueVideo("KkXq2sv6Tos");
                         // or to play immediately
                         // youTubePlayer.loadVideo("5xVh-7ywKpE");
                     }
