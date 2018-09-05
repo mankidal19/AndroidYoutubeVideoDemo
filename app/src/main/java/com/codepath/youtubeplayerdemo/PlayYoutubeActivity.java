@@ -18,6 +18,7 @@ public class PlayYoutubeActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_youtube);
 
+        //first live vid; KBSWorld
         YouTubePlayerView youTubePlayerView =
                 (YouTubePlayerView) findViewById(R.id.player);
 
@@ -28,9 +29,31 @@ public class PlayYoutubeActivity extends YouTubeBaseActivity {
                                                         YouTubePlayer youTubePlayer, boolean b) {
 
                         // do any work here to cue video, play video, etc.
-                        //youTubePlayer.cueVideo("KkXq2sv6Tos");
+                        youTubePlayer.cueVideo("KkXq2sv6Tos");
                         // or to play immediately
-                         youTubePlayer.loadVideo("KkXq2sv6Tos");
+                         //youTubePlayer.loadVideo("KkXq2sv6Tos");
+                    }
+                    @Override
+                    public void onInitializationFailure(YouTubePlayer.Provider provider,
+                                                        YouTubeInitializationResult youTubeInitializationResult) {
+                        Toast.makeText(PlayYoutubeActivity.this, "Youtube Failed!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        //add another live video, Spongebob 24/7
+        YouTubePlayerView youTubePlayerView2 =
+                (YouTubePlayerView) findViewById(R.id.player2);
+
+        youTubePlayerView2.initialize(YT_API_KEY,
+                new YouTubePlayer.OnInitializedListener() {
+                    @Override
+                    public void onInitializationSuccess(YouTubePlayer.Provider provider,
+                                                        YouTubePlayer youTubePlayer2, boolean b) {
+
+                        // do any work here to cue video, play video, etc.
+                        youTubePlayer2.cueVideo("TP0xaaN1r-8");
+                        // or to play immediately
+                        //youTubePlayer.loadVideo("TP0xaaN1r-8");
                     }
                     @Override
                     public void onInitializationFailure(YouTubePlayer.Provider provider,
