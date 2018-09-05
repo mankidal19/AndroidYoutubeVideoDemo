@@ -28,9 +28,9 @@ public class PlayYoutubeActivity extends YouTubeBaseActivity {
                                                         YouTubePlayer youTubePlayer, boolean b) {
 
                         // do any work here to cue video, play video, etc.
-                        youTubePlayer.cueVideo("KkXq2sv6Tos");
+                        //youTubePlayer.cueVideo("KkXq2sv6Tos");
                         // or to play immediately
-                        // youTubePlayer.loadVideo("5xVh-7ywKpE");
+                         youTubePlayer.loadVideo("KkXq2sv6Tos");
                     }
                     @Override
                     public void onInitializationFailure(YouTubePlayer.Provider provider,
